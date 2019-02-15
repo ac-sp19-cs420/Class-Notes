@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		875F419F22176D230018E504 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 875F419E22176D230018E504 /* main.c */; };
+		875F41A822176D370018E504 /* Functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 875F41A522176D370018E504 /* Functions.c */; };
+		875F41A922176D370018E504 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 875F41A722176D370018E504 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		875F419B22176D230018E504 /* Notes-02-15 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Notes-02-15"; sourceTree = BUILT_PRODUCTS_DIR; };
-		875F419E22176D230018E504 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		875F41A522176D370018E504 /* Functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Functions.c; sourceTree = "<group>"; };
+		875F41A622176D370018E504 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		875F41A722176D370018E504 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		875F419D22176D230018E504 /* Notes-02-15 */ = {
 			isa = PBXGroup;
 			children = (
-				875F419E22176D230018E504 /* main.c */,
+				875F41A522176D370018E504 /* Functions.c */,
+				875F41A622176D370018E504 /* Functions.h */,
+				875F41A722176D370018E504 /* main.c */,
 			);
 			path = "Notes-02-15";
 			sourceTree = "<group>";
@@ -118,7 +123,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875F419F22176D230018E504 /* main.c in Sources */,
+				875F41A922176D370018E504 /* main.c in Sources */,
+				875F41A822176D370018E504 /* Functions.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
