@@ -8,22 +8,31 @@
 
 #include <stdio.h>
 
+void foo(int*a){
+    (*a) = (*a) + 100;
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
-    int size = sizeof(long);
-    char aaron[] = "aaron";
-    char david[] = "david";
-    char block[] = "block";
+    int a = 20;
+    int b = 30;
+    int c = 40;
+    int* a_ptr = &a;
+    int* b_ptr = &b;
+    int* c_ptr = &c;
     
-    printf("%s\n", david);
-    printf("%c\n", david[0]);
-    for(int i = 0;i<10;i++){
-        printf("%c\n", david[i]);
-    }
+    printf("The location of a is %p\n", a_ptr);
+    printf("The location of b is %p\n", b_ptr);
+    printf("The location of c is %p\n", c_ptr);
     
-    printf(" The memory of aaron %p\n", aaron);
-    printf(" The memory of david %p\n", david);
-    printf(" The memory of block %p\n", block);
-    printf("It is %d bytes large\n", size);
+    *a_ptr = 60;
+    int theValueOfA = *a_ptr;
+    printf("The value  of a is %d\n", theValueOfA);
+    printf("The value  of a is %d\n", a);
+    foo(&c);
+    printf("The value  of c is %d\n", c);
+
+    int d = sizeof(char*);
+    printf("The size of %d\n", d);
     return 0;
 }
