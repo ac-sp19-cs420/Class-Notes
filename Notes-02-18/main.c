@@ -10,6 +10,20 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n"); 
+    int size = sizeof(long);
+    char aaron[] = "aaron";
+    char david[] = "david";
+    char block[] = "block";
+    
+    printf("%s\n", david);
+    printf("%c\n", david[0]);
+    for(int i = 0;i<10;i++){
+        printf("%c\n", david[i]);
+    }
+    
+    printf(" The memory of aaron %p\n", aaron);
+    printf(" The memory of david %p\n", david);
+    printf(" The memory of block %p\n", block);
+    printf("It is %d bytes large\n", size);
     return 0;
 }
