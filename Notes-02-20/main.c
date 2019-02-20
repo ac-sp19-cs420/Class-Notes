@@ -12,27 +12,21 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     //Small change
-    char* a = "Hello";
-    char b[5];
-    printf("a:%p\n",a);
-    printf("b:%p\n",b);
+    char a[2][3];
+    a[0][0] = 'a';
+    char* b = (char*)malloc(sizeof(char)*3);
+    char* c = (char*)malloc(sizeof(char)*3);
+    char** d = (char**)malloc(sizeof(char*)*2);
+    d[0] = b;
+    d[1] = c;
     
-    char* e = (char*)malloc(sizeof(char)*5);
-    char* c = (char*)malloc(sizeof(char)*6);
-    char* d = (char*)malloc(sizeof(char)*5);
-    c[0] = 'h';
-    c[1] = 'e';
-    c[2] = 'l';
-    c[3] = 'l';
-    c[4] = 'o';
-    c[5] = 0;
-    printf("c:%p\n", c);
-    printf("The string is %s\n", c);
-    printf("The location of d %p\n", d);
-    printf("The location of e %p\n", e);
+    char* e[2];
+    e[0] = b;
+    e[1] = c;
+    
+    free(b);
     free(c);
-    free(e);
     free(d);
-    
+    //Don't need to free e because it's on the stack
     return 0;
 }
