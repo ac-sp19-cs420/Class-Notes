@@ -9,13 +9,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
+
+typedef struct point{
+    double x;
+    double y;
+} point;
+
+double origin_distance(point* p){
+    
+    double dis = pow(pow(p->x, 2.0) + pow(p->y, 2.0), 0.5);
+    return dis;
+}
 
 int main(int argc, const char * argv[]) {
-    printf("The number of params is %d\n", argc);
-    for(int i =0;i<argc;i++){
-        printf("Param %d is \"%s\"\n",i, argv[i]);
-        int z = atoi(argv[i]) + 20;
-        printf("Param %d plus 20 is %d\n",i, z);
-    }
+
+    point* p = (point*)malloc(sizeof(point));
+    p->x = 20;
+    p->y = 30;
+    double d = origin_distance(p);
+    printf("The value is %.2f\n",d);
+    
     return 0;
 }
